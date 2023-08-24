@@ -1,0 +1,6 @@
+# Ignore the .env file
+.env
+.idea
+.DS_Store
+node_modules
+build

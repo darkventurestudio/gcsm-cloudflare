@@ -1,0 +1,5 @@
+# Ignore the .env file
+.env
+.editorconfig
+.idea
+src/

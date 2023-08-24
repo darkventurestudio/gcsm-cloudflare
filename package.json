@@ -1,0 +1,30 @@
+{
+    "name": "google-cloud-secrets-manager",
+    "version": "1.0.11",
+    "files": [
+        "build/*"
+    ],
+    "description": "Google Cloud Secrets Manager Operator",
+    "main": "./build/index.js",
+    "scripts": {
+        "start": "node src/index.ts",
+        "build": "tsc"
+    },
+    "author": "",
+    "license": "Apache-2.0",
+    "compilerOptions": {
+        "outDir": "./dist",
+        "rootDir": "./src",
+        "include": [
+            "src/**/*.ts"
+        ],
+        "exclude": [
+            "node_modules"
+        ]
+    },
+    "devDependencies": {
+        "@types/node": "18.17.9",
+        "ts-node": "^10.9.1",
+        "tsup": "^7.2.0"
+    }
+}
