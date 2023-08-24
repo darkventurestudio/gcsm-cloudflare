@@ -58,3 +58,6 @@ Update the value of a secret:
     const secretsStore = new SecretsStore({user, key, project_name});
     await secretsStore.updateCredential('secretId', 'newSecret');
 ```
+
+## Disclaimer
+This project is not supported by or part of Google Cloud or Cloudflare
