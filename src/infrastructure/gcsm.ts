@@ -41,12 +41,12 @@ async function sign(content: string, signingKey: string) {
             binaryKey,
             {
                 name: 'RSASSA-PKCS1-V1_5',
-                hash: {name: 'SHA-256'}
+                hash: { name: 'SHA-256' }
             },
             false,
             ['sign']
     );
-    const binarySignature = await crypto.subtle.sign({name: 'RSASSA-PKCS1-V1_5'}, signer, buf);
+    const binarySignature = await crypto.subtle.sign({ name: 'RSASSA-PKCS1-V1_5' }, signer, buf);
     return arrayBufferToBase64Url(binarySignature);
 }
 
@@ -64,7 +64,7 @@ async function sign(content: string, signingKey: string) {
  * @returns a valid Google auth token for the provided service user and scope or undefined
  */
 export async function getGoogleAuthToken(user: string, key: string): Promise<string> {
-    const jwtHeader = objectToBase64url({alg: 'RS256', typ: 'JWT'});
+    const jwtHeader = objectToBase64url({ alg: 'RS256', typ: 'JWT' });
     try {
         const assertion_time = Math.round(Date.now() / 1000);
         const expiry_time = assertion_time + 3600;

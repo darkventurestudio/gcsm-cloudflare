@@ -12,7 +12,7 @@ export class SecretsStore {
 
     private readonly project_name: string;
 
-    constructor({user, key, project_name}: { user: string, key: string, project_name: string }) {
+    constructor({ user, key, project_name }: { user: string, key: string, project_name: string }) {
         this.user = user;
         this.key = key;
         this.project_name = project_name;
