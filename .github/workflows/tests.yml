@@ -7,6 +7,11 @@ jobs:
     name: Run tests
     timeout-minutes: 5
     runs-on: ubuntu-latest
+    permissions:
+      # Required to checkout the code
+      contents: read
+      # Required to put a comment into the pull-request
+      pull-requests: write
 
     steps:
       - uses: actions/checkout@v3
@@ -18,8 +23,11 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Run tests
-        run: npm run test
-
-      - name: Run code coverage
+      - name: Run tests and code coverage
         run: npm run coverage
+
+      - name: 'Report Coverage'
+        if: always()
+        uses: davelosert/vitest-coverage-report-action@v2 # https://github.com/marketplace/actions/vitest-coverage-report
+        with:
+          file-coverage-mode: all
