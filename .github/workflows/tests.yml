@@ -1,0 +1,25 @@
+name: Tests
+
+on: pull_request
+
+jobs:
+  test:
+    name: Run tests
+    timeout-minutes: 5
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: "18"
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run tests
+        run: npm run test
+
+      - name: Run code coverage
+        run: npm run coverage
