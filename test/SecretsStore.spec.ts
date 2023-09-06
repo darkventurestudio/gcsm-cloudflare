@@ -4,11 +4,6 @@ import { SecretsStore } from '../src';
 
 global.fetch = vi.fn();
 
-vi.mock("nanoid", () => {
-    const nanoid = vi.fn().mockReturnValue("nanoid");
-    return { nanoid };
-});
-
 vi.spyOn(getGoogleAuthToken, "getGoogleAuthToken").mockReturnValue(Promise.resolve("token"));
 
 function createFetchResponse(data: unknown) {
