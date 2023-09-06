@@ -20,6 +20,21 @@ jobs:
         with:
           node-version: "18"
 
+      - name: Check if source code changed
+        id: changed-files
+        uses: tj-actions/changed-files@v39 # https://github.com/marketplace/actions/changed-files
+        with:
+          files_ignore: |
+            .editorconfig
+            .eslintrc.json
+            .github/*
+            .gitignore
+            .npmignore
+            vitest.config.js
+
+      - uses: kriasoft/check-version@v1 # https://github.com/kriasoft/check-version
+        if: steps.changed-files.outputs.any_changed == 'true'
+
       - name: Install dependencies
         run: npm install
 
