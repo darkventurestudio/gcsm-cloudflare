@@ -1,12 +1,5 @@
 // Code taken from https://gist.github.com/markelliot/6627143be1fc8209c9662c504d0ff205 and modified
 
-let crypto;
-try {
-    crypto = require('crypto');
-} catch (err) {
-    crypto = global.crypto
-}
-
 function objectToBase64url(object: object) {
     return arrayBufferToBase64Url(
             new TextEncoder().encode(JSON.stringify(object))
