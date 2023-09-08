@@ -23,6 +23,11 @@ GCP_USER: Your Google Cloud Platform user (email) associated with the project.
 GCP_KEY: The path to your GCP service account key file (JSON file).
 GCP_PROJECT_NAME: The name of your GCP project where Secrets Manager will be used.
 
+### IMPORTANT
+The GCP_KEY in the format of -----BEGIN PRIVATE KEY----- .... -----END PRIVATE KEY----- taken from the JSON
+needs to be processed to make the '\n' real new lines because Cloudflare adds an extra '\' making it a '\\n'
+and then the decryption of the key does not work.
+
 You can set these variables by creating a .env file in the root of the project:
 
 ```properties
