@@ -36,9 +36,7 @@ new SecretsStore({ user, key, project_name })
     - secretmanager.versions.access
 
 
-2. The `key` is the Private Key. This key can be obtained from GCP Console. IAM - Select User - Keys. Then, generate a key if it does
-   not exist
-   and take the privateKey field from the json.
+2. The `key` is the Private Key. To obtain this key, follow [the official Google documentation](https://developers.google.com/workspace/guides/create-credentials#create_credentials_for_a_service_account)
 
 > ### IMPORTANT
 >   The `key` in the format of -----BEGIN PRIVATE KEY----- .... -----END PRIVATE KEY----- taken from the JSON
