@@ -9,7 +9,7 @@ Before you begin, make sure you have the following:
 
 - Node.js installed (https://nodejs.org/)
 - Google Cloud Platform (GCP) account with a project set up
-- Google Secrets Manager active in your account.
+- Google Secrets Manager API active in your project.
 
 ## Installation
 
