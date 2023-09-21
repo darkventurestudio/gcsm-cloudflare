@@ -6,9 +6,7 @@ global.fetch = vi.fn();
 
 vi.spyOn(getGoogleAuthToken, "getGoogleAuthToken").mockReturnValue(Promise.resolve("token"));
 
-function createFetchResponse(data: unknown) {
-    return { json: () => Promise.resolve(data) };
-}
+const createFetchResponse = (data: unknown) => ({ json: () => Promise.resolve(data) });
 
 describe("SecretsStore", () => {
     let testObj: SecretsStore;
