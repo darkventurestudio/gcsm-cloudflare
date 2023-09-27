@@ -19,7 +19,7 @@ jobs:
           files_ignore: |
             .editorconfig
             .eslintrc.json
-            .github/*
+            .github/**
             .gitignore
             .npmignore
             vitest.config.js
