@@ -8,7 +8,7 @@ jobs:
     timeout-minutes: 5
     runs-on: ubuntu-latest
     permissions:
-      # Required to checkout the code
+      # Required to check out the code
       contents: read
       # Required to put a comment into the pull-request
       pull-requests: write
@@ -18,7 +18,7 @@ jobs:
 
       - uses: actions/setup-node@v3
         with:
-          node-version: "18"
+          node-version: "20"
 
       - name: Check if source code changed
         id: changed-files
