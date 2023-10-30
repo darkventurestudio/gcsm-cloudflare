@@ -24,7 +24,7 @@ jobs:
             .npmignore
             vitest.config.js
 
-      - uses: actions/setup-node@v3
+      - uses: actions/setup-node@v4
         if: steps.changed-files.outputs.any_changed == 'true'
         with:
           node-version: "20"
