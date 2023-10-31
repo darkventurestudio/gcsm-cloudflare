@@ -1,6 +1,6 @@
 {
     "name": "@embley/google-secrets-manager-cloudflare",
-    "version": "1.0.10",
+    "version": "1.0.11",
     "files": [
         "build/*"
     ],
@@ -44,13 +44,11 @@
         "eslint": "8.52.0",
         "ts-node": "^10.9.1",
         "tsup": "^7.2.0",
-        "vitest": "^0.34.6"
+        "vitest": "^0.34.6",
+        "typescript": "^5.2.2"
     },
     "engines": {
         "node": ">=18.x",
         "npm": ">=9.x"
-    },
-    "dependencies": {
-        "typescript": "^5.2.2"
     }
 }
