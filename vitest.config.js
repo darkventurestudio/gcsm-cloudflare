@@ -3,7 +3,7 @@ import { configDefaults, defineConfig } from 'vitest/config';
 export default defineConfig({
     test: {
         coverage: {
-            reporter: ['html', 'text', 'json-summary', 'json'],
+            reporter: ['json-summary'],
             thresholds: {
                 lines: 63,
                 branches: 81,
