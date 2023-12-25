@@ -14,7 +14,7 @@ jobs:
 
       - name: Check if source code changed
         id: changed-files
-        uses: tj-actions/changed-files@v40 # https://github.com/marketplace/actions/changed-files
+        uses: tj-actions/changed-files@v41 # https://github.com/marketplace/actions/changed-files
         with:
           files_ignore: |
             .editorconfig
