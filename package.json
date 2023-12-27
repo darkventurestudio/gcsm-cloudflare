@@ -1,6 +1,6 @@
 {
     "name": "@embley/google-secrets-manager-cloudflare",
-    "version": "1.0.19",
+    "version": "1.0.20",
     "files": [
         "build/*"
     ],
