@@ -29,25 +29,24 @@ new SecretsStore({ user, key, project_name })
 
 1. Where the `user` is the Google Cloud Platform user or service account that has at least the following permissions to handle secrets and
    secrets versions:
-    - secretmanager.secrets.create
-    - secretmanager.secrets.setIamPolicy
-    - secretmanager.secrets.update
-    - secretmanager.versions.add
-    - secretmanager.versions.access
+  - secretmanager.secrets.create
+  - secretmanager.secrets.setIamPolicy
+  - secretmanager.secrets.update
+  - secretmanager.versions.add
+  - secretmanager.versions.access
 
 
-2. The `key` is the Private Key. To obtain this key, follow [the official Google documentation](https://developers.google.com/workspace/guides/create-credentials#create_credentials_for_a_service_account)
+2. The `key` is the Private Key. To obtain this key,
+   follow [the official Google documentation](https://developers.google.com/workspace/guides/create-credentials#create_credentials_for_a_service_account)
 
 > ### IMPORTANT
 >   The `key` in the format of -----BEGIN PRIVATE KEY----- .... -----END PRIVATE KEY----- taken from the JSON
 > needs to be processed to make the '\n' real new lines because Cloudflare adds an extra '\' making it a '\\n'
-> and then the decryption of the key does not work. This happens both through `wrangler secret add` and in the Cloudflare dashboard. 
+> and then the decryption of the key does not work. This happens both through `wrangler secret add` and in the Cloudflare dashboard.
 >
 >It does not happen in your local environment, though.
- 
 
 3. The `project_name` is the Google Cloud Platform project name.
-
 
 ## Usage
 
@@ -61,6 +60,7 @@ await secretsStore.storeCredential('secretId', 'secret', { 'label1': 'labelValue
 ```
 
 2. Retrieving the value of a secret.
+
 ```javascript
 const secretsStore = new SecretsStore({ user, key, project_name });
 await secretsStore.retrieveCredential('secretId');
