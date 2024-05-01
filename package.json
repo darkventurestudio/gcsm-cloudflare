@@ -1,6 +1,6 @@
 {
   "name": "@embley/google-secrets-manager-cloudflare",
-    "version": "1.0.24",
+    "version": "1.0.25",
   "files": [
     "build/*"
   ],
@@ -38,14 +38,14 @@
     ]
   },
   "devDependencies": {
-    "@types/node": "20.12.2",
-    "@typescript-eslint/eslint-plugin": "^7.4.0",
-    "@vitest/coverage-v8": "^1.4.0",
+    "@types/node": "20.12.7",
+    "@typescript-eslint/eslint-plugin": "7.8.0",
+    "@vitest/coverage-v8": "1.5.3",
     "eslint": "8.57.0",
-    "ts-node": "^10.9.2",
-    "tsup": "^8.0.2",
-    "vitest": "^1.3.1",
-    "typescript": "^5.4.3"
+    "ts-node": "10.9.2",
+    "tsup": "8.0.2",
+    "vitest": "1.5.3",
+    "typescript": "5.4.5"
   },
   "engines": {
     "node": ">=20.x",
